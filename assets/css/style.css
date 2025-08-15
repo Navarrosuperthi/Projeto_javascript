@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: red;
+}
+
+section{
+   
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+}
+button{
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius:0.5rem;
+    background: yellow;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    
+}
+
+button:hover{
+    background: blue;
+    color: black;
+}
+.hide-modal{
+    opacity: 0;
+    visibility: hidden;
+}
+ 
+.modal-login, .modaç-register{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: green;
+    transition: açç 350ms ease-in-out;
+}
+
+
