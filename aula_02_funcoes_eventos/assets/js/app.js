@@ -4,7 +4,9 @@ const telefone = document.querySelector("#telefone");
 const nascimento = document.querySelector("#nascimento");
 const btn_salvar = document.querySelector("#btn-salvar");
 
-const db_dados = [];
+const db_dados = localStorage.getItem("Clientes")
+  ? JSON.parse(localStorage.getItem("Clientes"))
+  : [];
 
 const nomeValor = nome.value;
 btn_salvar.addEventListener("click", (e) => {
@@ -21,6 +23,11 @@ btn_salvar.addEventListener("click", (e) => {
   };
   db_dados.push(dados);
   localStorage.setItem("Clientes", JSON.stringify(db_dados));
+
+  nome.value = "";
+  email.value = "";
+  telefone.value = "";
+  nascimento.value = "";
 });
 
 email.addEventListener("input", () => {});
